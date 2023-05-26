@@ -6,7 +6,7 @@ import CardLayout from "../layouts/CardLayout";
 const Aboutme = () => {
   return (
     <CardLayout>
-      {/* <div className="relative flex-1 h-64 w-80">
+      <div className="relative flex-1 hidden h-64 w-80 xl:block">
         <img
           src={workspace}
           alt="not workwing"
@@ -17,9 +17,9 @@ const Aboutme = () => {
           alt="cant"
           className="absolute bottom-[-20px] right-[-50px] rounded-full animate-spin-slow w-32 h-32"
         />
-      </div> */}
-      <div className="flex-1">
-        <p className="mb-2 text-base font-bold text-center text-textBlue">
+      </div>
+      <div id="about" className="flex-1">
+        <p className="mb-2 text-xl font-bold text-center text-textBlue">
           About Me
         </p>
         <p className="mb-2 text-lg font-bold text-center">

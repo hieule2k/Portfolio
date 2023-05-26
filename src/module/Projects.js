@@ -12,8 +12,10 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const Projects = () => {
   return (
     <CardLayout>
-      <div className="flex-1 ">
-        <div className="text-lg font-bold text-center">Schedule Table</div>
+      <div id="project" className="flex-1">
+        <div className="text-lg font-bold text-center xl:hidden">
+          Schedule Table
+        </div>
         <div className="relative w-full h-64 group">
           <img src={pic} alt="h" className="w-full h-full" />
           <div className="absolute bottom-0 w-full h-5 transition-all duration-500 ease-in-out opacity-0 group-hover:block group-hover:h-full group-hover:bg-black group-hover:opacity-80">
@@ -46,7 +48,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="hidden gap-3">
+      <div className="flex-1 hidden gap-3 xl:block">
         <h1 className="text-lg font-bold text-center">
           Booking Hotel
           <FontAwesomeIcon icon={faHotel} style={{ color: "#df1111" }} />

@@ -13,6 +13,10 @@
   input {
     @apply outline-none;
   }
+  * {
+
+    scroll-behavior: smooth !important;
+  }
 }
 
 //Fonts embeded
