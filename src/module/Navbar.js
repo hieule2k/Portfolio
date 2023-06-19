@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { changeBurger } from "../features/burgerSlice";
 const Navbar = () => {
-  const [burger, setBurger] = useState(false);
+  const burger = useSelector((state) => state.burger.boolean);
+  const dispatch = useDispatch();
   const handleBurger = () => {
-    setBurger(!burger);
+    dispatch(changeBurger(burger));
   };
 
   return (
@@ -58,11 +61,18 @@ const Navbar = () => {
             </span>
           </a>
         </li>{" "}
-        <li className={` cursor-pointer  mr-3 `}>
-          <span className="relative text-base before:transition-all before:duration-300 before:ease-in before:h-0.5 before:absolute before:bg-sky-300  before:w-0 before:bottom-0 hover:before:w-full hover:text-[#ff781f]">
-            Contact
-          </span>
-        </li>
+        <a
+          href="#contact"
+          onClick={() => {
+            burger && handleBurger();
+          }}
+        >
+          <li className={` cursor-pointer  mr-3 `}>
+            <span className="relative text-base before:transition-all before:duration-300 before:ease-in before:h-0.5 before:absolute before:bg-sky-300  before:w-0 before:bottom-0 hover:before:w-full hover:text-[#ff781f]">
+              Contact
+            </span>
+          </li>
+        </a>
       </ul>
       <div
         onClick={handleBurger}
